@@ -32,6 +32,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -39,9 +41,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FunktionsSelektor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FunktionsSelektor.Designer.cs">
+      <DependentUpon>FunktionsSelektor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Grundrechner.cs" />
     <Compile Include="rechnermodulbibliothek.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UniversellesEingabemodul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UniversellesEingabemodul.Designer.cs">
+      <DependentUpon>UniversellesEingabemodul.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FunktionsSelektor.resx">
+      <DependentUpon>FunktionsSelektor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UniversellesEingabemodul.resx">
+      <DependentUpon>UniversellesEingabemodul.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

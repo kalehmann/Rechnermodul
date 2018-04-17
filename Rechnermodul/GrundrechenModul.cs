@@ -12,21 +12,25 @@ namespace Rechnermodul
         {
             this.setName("Grundrechner");
             this.setDescription("");
-
-            this.addFunction("Grundrechner", "", new GrundrechenFunction());
+        
+            this.addFunction( new GrundrechenFunction());
         }
     }
 
-    public class GrundrechenFunction: RechnermodulBibliothek.FunctionInterface
+    public partial class GrundrechenFunction: RechnermodulBibliothek.AbstractFunction
     {
-        void RechnermodulBibliothek.FunctionInterface.buildUI(RechnermodulBibliothek.UIBuilderInterface builder)
+        public GrundrechenFunction() : base("Grundrechner", "")
+        {
+        }
+
+        public override void buildUI(RechnermodulBibliothek.UIBuilder builder)
         {
             RechnermodulBibliothek.ModifierChain mc = new RechnermodulBibliothek.ModifierChain(RechnermodulBibliothek.Modifiers.NotEmptyModifier);
             builder.addStringInput("infix", "Eingabe", mc);
 
         }
 
-        string RechnermodulBibliothek.FunctionInterface.calculate(RechnermodulBibliothek.UserDataInterface data)
+        public override string calculate(RechnermodulBibliothek.UserDataInterface data)
         {
             return RechnermodulBibliothek.Grundrechner.calculate(data.getStringValue("infix"));
 

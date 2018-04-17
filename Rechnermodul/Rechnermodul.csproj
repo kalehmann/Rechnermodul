@@ -48,12 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GrundrechenModul.cs" />
-    <Compile Include="universelleseingabemodul.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="universelleseingabemodul.Designer.cs">
-      <DependentUpon>universelleseingabemodul.cs</DependentUpon>
-    </Compile>
     <Compile Include="rechnermodul.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,9 +67,6 @@
     </Compile>
     <EmbeddedResource Include="rechnermodul.resx">
       <DependentUpon>rechnermodul.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="universelleseingabemodul.resx">
-      <DependentUpon>universelleseingabemodul.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
